@@ -1,0 +1,14 @@
+query RecipeById($recipeId: ID!) {
+  recipe(id: $recipeId) {
+    id
+    name
+    ingredients {
+      name
+    }
+    instructions
+    totalTime
+    ingredientsCount
+    serving
+    mainImage
+  }
+}

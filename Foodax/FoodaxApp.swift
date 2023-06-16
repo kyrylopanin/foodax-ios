@@ -11,7 +11,9 @@ import SwiftUI
 struct FoodaxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                SearchRecipe()
+            }
         }
     }
 }

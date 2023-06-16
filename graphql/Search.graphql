@@ -1,0 +1,14 @@
+query SearchRecipeByNameOrIngredient($query: String) {
+  searchRecipeByNameOrIngredient(query: $query) {
+    onPlan {
+      id
+      ingredients {
+        name
+      }
+      mainImage
+      ingredientsCount
+      name
+      totalTime
+    }
+  }
+}
