@@ -12,7 +12,10 @@ struct SearchRecipe: View {
     
     var body: some View {
         VStack {
-            FDXSearchBar(text: $viewModel.searchQuery)
+            FDXSearchBar(text: $viewModel.searchQuery, cancelAction: {
+                viewModel.searchQuery = ""
+                viewModel.items = []
+            })
                 .padding(.horizontal, 16)
             ScrollView {
                 VStack {
